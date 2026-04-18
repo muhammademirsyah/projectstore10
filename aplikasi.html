@@ -7,8 +7,36 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="src/css/styles.css" />
-  <script src="src/js/product-loader.js"></script>
+  <link rel="stylesheet" href="./src/css/styles.css?v=20260418" />
+  <script>
+    (function () {
+      const styleCandidates = [
+        './src/css/styles.css?v=20260418',
+        'src/css/styles.css?v=20260418',
+        '/src/css/styles.css?v=20260418',
+        '../src/css/styles.css?v=20260418'
+      ];
+
+      function hasLoadedMainStyle() {
+        return Array.from(document.styleSheets || []).some((sheet) => {
+          const href = String(sheet.href || '');
+          return href.includes('src/css/styles.css');
+        });
+      }
+
+      window.addEventListener('load', function () {
+        if (hasLoadedMainStyle()) return;
+        styleCandidates.forEach((href, index) => {
+          const fallback = document.createElement('link');
+          fallback.rel = 'stylesheet';
+          fallback.href = href;
+          fallback.setAttribute('data-style-fallback', String(index));
+          document.head.appendChild(fallback);
+        });
+      });
+    })();
+  </script>
+  <script src="./src/js/product-loader.js" defer></script>
   <audio id="bgMusic" loop>
     <source src="assets/music.mp3" type="audio/mpeg">
   </audio>
