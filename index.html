@@ -1,0 +1,379 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Ghaniyy Store - Layanan Akademik & Digital Terpercaya</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="src/css/styles.css" />
+  <script src="src/js/product-loader.js"></script>
+</head>
+<body>
+
+  <!-- BACKGROUND MUSIC -->
+  <audio id="bgMusic" loop>
+    <source src="assets/music.mp3" type="audio/mpeg">
+  </audio>
+
+  <!-- HEADER -->
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="index.html">
+        <img src="assets/logo1.png" alt="Ghaniyy Store" class="logo-img"/>
+        <span class="brand-text">Ghaniyy Store</span>
+      </a>
+
+      <div class="hamburger" onclick="toggleMenu()">
+        <div></div>
+        <div></div>
+        <div></div>
+      </div>
+    </div>
+  </header>
+
+  <!-- MENU OVERLAY -->
+  <div class="menu-overlay" id="menuOverlay" onclick="toggleMenu()">
+    <div class="menu-content" onclick="event.stopPropagation()">
+      <div class="menu-header">
+        <h2>Menu</h2>
+        <button class="close-btn" onclick="toggleMenu()">&times;</button>
+      </div>
+      <nav class="menu-nav">
+        <a href="layanan.html">📚 Layanan Akademik</a>
+        <a href="aplikasi.html">📱 Aplikasi Premium</a>
+        <a href="kontak.html">📞 Kontak</a>
+      </nav>
+    </div>
+  </div>
+
+  <!-- HERO SECTION -->
+  <section class="hero-home">
+    <div class="container">
+      <video autoplay muted loop playsinline class="hero-video-bg">
+        <source src="assets/web.mp4" type="video/mp4">
+      </video>
+      <div class="hero-overlay"></div>
+      <div class="hero-content">
+        <div class="hero-logo">
+          <img src="assets/logo1.png" alt="Ghaniyy Store Logo" class="hero-logo-img"/>
+        </div>
+        <h1 class="hero-title">Ghaniyy Store</h1>
+        <p class="hero-subtitle">Layanan Akademik & Digital Terpercaya</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- TENTANG KAMI SECTION -->
+  <section class="about-section">
+    <div class="container">
+      <h2 class="section-title">Tentang Kami</h2>
+      <p class="about-intro">
+        Ghaniyy Store adalah penyedia layanan digital yang menawarkan kebutuhan akademik dan hiburan, 
+        mulai dari Cek Turnitin, Jasa Parafrase, Publish Jurnal, Perbaikan Naskah, hingga berbagai 
+        aplikasi premium dengan harga terjangkau.
+      </p>
+      
+      <button class="btn-more" onclick="toggleDetail()">
+        <span id="btnText">Lebih Lanjut</span>
+        <span id="btnIcon">▼</span>
+      </button>
+
+      <div class="about-detail" id="aboutDetail">
+        <p>
+          Ghaniyy Store merupakan penyedia layanan digital terpercaya yang dirancang untuk membantu 
+          pelajar, mahasiswa, penulis, hingga pengguna umum dalam memenuhi berbagai kebutuhan akademik 
+          dan hiburan. Kami menyediakan layanan profesional seperti Cek Turnitin, Jasa Parafrase, 
+          Publish Jurnal, dan Perbaikan Naskah, termasuk pengaturan format penulisan, margin, 
+          daftar isi, daftar pustaka, serta manajemen referensi dengan Mendeley.
+        </p>
+        <p>
+          Selain itu, Ghaniyy Store juga menghadirkan beragam aplikasi premium yang dapat digunakan 
+          untuk meningkatkan produktivitas dan hiburan, seperti Canva Pro, CapCut Pro, Netflix, 
+          Spotify Premium, YouTube Premium, Disney+ Hotstar, QuillBot Premium, dan layanan digital 
+          populer lainnya. Dengan harga yang ramah di kantong dan pelayanan yang responsif, kami 
+          berkomitmen memberikan pengalaman terbaik bagi setiap pengguna.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- WHY CHOOSE US SECTION -->
+  <section class="why-section">
+    <div class="container">
+      <h2 class="section-title">Kenapa Harus Memilih Ghaniyy Store?</h2>
+      <div class="why-grid">
+        <div class="why-card">
+          <div class="why-icon">
+            <svg width="70" height="70" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <circle cx="50" cy="50" r="45" fill="url(#premium1)" opacity="0.15"/>
+              <path d="M50 20 L58 38 L78 41 L64 54 L67 74 L50 65 L33 74 L36 54 L22 41 L42 38 Z" fill="url(#premium1)" stroke="#1e40af" stroke-width="2"/>
+              <circle cx="50" cy="45" r="8" fill="#fbbf24"/>
+              <defs>
+                <linearGradient id="premium1" x1="0%" y1="0%" x2="100%" y2="100%">
+                  <stop offset="0%" style="stop-color:#60a5fa"/>
+                  <stop offset="50%" style="stop-color:#3b82f6"/>
+                  <stop offset="100%" style="stop-color:#1e40af"/>
+                </linearGradient>
+              </defs>
+            </svg>
+          </div>
+          <h3>Reputasi Terpercaya</h3>
+        </div>
+        <div class="why-card">
+          <div class="why-icon">
+            <svg width="70" height="70" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <circle cx="50" cy="50" r="45" fill="url(#premium2)" opacity="0.15"/>
+              <path d="M50 15 L25 30 L25 50 C25 70 35 85 50 92 C65 85 75 70 75 50 L75 30 Z" fill="url(#premium2)" stroke="#1e40af" stroke-width="2"/>
+              <path d="M38 50 L45 57 L62 40" stroke="#fbbf24" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+              <defs>
+                <linearGradient id="premium2" x1="0%" y1="0%" x2="100%" y2="100%">
+                  <stop offset="0%" style="stop-color:#60a5fa"/>
+                  <stop offset="50%" style="stop-color:#3b82f6"/>
+                  <stop offset="100%" style="stop-color:#1e40af"/>
+                </linearGradient>
+              </defs>
+            </svg>
+          </div>
+          <h3>Kualitas Premium</h3>
+        </div>
+        <div class="why-card">
+          <div class="why-icon">
+            <svg width="70" height="70" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <circle cx="50" cy="50" r="45" fill="url(#premium3)" opacity="0.15"/>
+              <circle cx="50" cy="35" r="15" fill="url(#premium3)" stroke="#1e40af" stroke-width="2"/>
+              <path d="M20 80 C20 60 32 50 50 50 C68 50 80 60 80 80" stroke="url(#premium3)" stroke-width="4" stroke-linecap="round"/>
+              <rect x="38" y="38" width="24" height="3" fill="#fbbf24" rx="1.5"/>
+              <defs>
+                <linearGradient id="premium3" x1="0%" y1="0%" x2="100%" y2="100%">
+                  <stop offset="0%" style="stop-color:#60a5fa"/>
+                  <stop offset="50%" style="stop-color:#3b82f6"/>
+                  <stop offset="100%" style="stop-color:#1e40af"/>
+                </linearGradient>
+              </defs>
+            </svg>
+          </div>
+          <h3>Layanan Profesional</h3>
+        </div>
+        <div class="why-card">
+          <div class="why-icon">
+            <svg width="70" height="70" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <circle cx="50" cy="50" r="45" fill="url(#premium4)" opacity="0.15"/>
+              <path d="M55 15 L20 50 L45 50 L40 85 L75 45 L50 45 Z" fill="url(#premium4)" stroke="#f59e0b" stroke-width="2"/>
+              <path d="M55 15 L50 30 L45 50 L50 45 L40 85 L45 65 L50 45 Z" fill="#fef3c7" opacity="0.4"/>
+              <defs>
+                <linearGradient id="premium4" x1="0%" y1="0%" x2="100%" y2="100%">
+                  <stop offset="0%" style="stop-color:#fcd34d"/>
+                  <stop offset="50%" style="stop-color:#fbbf24"/>
+                  <stop offset="100%" style="stop-color:#f59e0b"/>
+                </linearGradient>
+              </defs>
+            </svg>
+          </div>
+          <h3>Respons Cepat</h3>
+        </div>
+        <div class="why-card">
+          <div class="why-icon">
+            <svg width="70" height="70" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <circle cx="50" cy="50" r="45" fill="url(#premium5)" opacity="0.15"/>
+              <rect x="20" y="30" width="60" height="45" rx="6" fill="url(#premium5)" stroke="#1e40af" stroke-width="2"/>
+              <path d="M20 42 L80 42" stroke="#1e40af" stroke-width="3"/>
+              <circle cx="32" cy="58" r="4" fill="#fbbf24"/>
+              <rect x="45" y="54" width="25" height="4" rx="2" fill="#93c5fd"/>
+              <rect x="45" y="64" width="18" height="3" rx="1.5" fill="#bfdbfe"/>
+              <defs>
+                <linearGradient id="premium5" x1="0%" y1="0%" x2="100%" y2="100%">
+                  <stop offset="0%" style="stop-color:#60a5fa"/>
+                  <stop offset="50%" style="stop-color:#3b82f6"/>
+                  <stop offset="100%" style="stop-color:#1e40af"/>
+                </linearGradient>
+              </defs>
+            </svg>
+          </div>
+          <h3>Harga Kompetitif</h3>
+        </div>
+        <div class="why-card">
+          <div class="why-icon">
+            <svg width="70" height="70" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <circle cx="50" cy="50" r="45" fill="url(#premium6)" opacity="0.15"/>
+              <rect x="25" y="45" width="50" height="38" rx="6" fill="url(#premium6)" stroke="#1e40af" stroke-width="2"/>
+              <path d="M50 45 L50 30 C50 22 44 17 37 17 C30 17 24 22 24 30 L24 38" stroke="url(#premium6)" stroke-width="4" stroke-linecap="round"/>
+              <circle cx="50" cy="64" r="6" fill="#fbbf24"/>
+              <rect x="48" y="70" width="4" height="8" rx="2" fill="#f59e0b"/>
+              <defs>
+                <linearGradient id="premium6" x1="0%" y1="0%" x2="100%" y2="100%">
+                  <stop offset="0%" style="stop-color:#60a5fa"/>
+                  <stop offset="50%" style="stop-color:#3b82f6"/>
+                  <stop offset="100%" style="stop-color:#1e40af"/>
+                </linearGradient>
+              </defs>
+            </svg>
+          </div>
+          <h3>Jaminan Kepuasan</h3>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- LAYANAN HIGHLIGHT SECTION -->
+  <section class="services-highlight">
+    <div class="container">
+      <h2 class="section-title">Layanan Kami</h2>
+      <div class="services-grid">
+        <div class="service-card" onclick="window.location.href='layanan.html'">
+          <div class="service-icon">📚</div>
+          <h3>Layanan Akademik</h3>
+          <p>Cek Turnitin, Parafrase, Publish Jurnal, Perbaikan Naskah, dan banyak lagi</p>
+          <span class="service-arrow">→</span>
+        </div>
+        <div class="service-card" onclick="window.location.href='aplikasi.html'">
+          <div class="service-icon">📱</div>
+          <h3>Aplikasi Premium</h3>
+          <p>Canva Pro, Netflix, Spotify, YouTube Premium, Disney+, dan aplikasi lainnya</p>
+          <span class="service-arrow">→</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FLOATING CS BUTTON -->
+  <a href="https://wa.me/62895374651500?text=Halo,%20saya%20tertarik%20dengan%20layanan%20Ghaniyy%20Store" target="_blank" class="floating-cs">
+    <img src="assets/sapaghania.png" alt="Sapa Ghania" class="cs-image">
+  </a>
+
+  <!-- FOOTER -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-col">
+          <h4>Ghaniyy Store</h4>
+          <p>Layanan digital terpercaya untuk kebutuhan akademik dan hiburan Anda sejak 2022.</p>
+        </div>
+        <div class="footer-col">
+          <h4>Menu</h4>
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="layanan.html">Layanan Akademik</a></li>
+            <li><a href="aplikasi.html">Aplikasi Premium</a></li>
+            <li><a href="kontak.html">Kontak</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Kontak</h4>
+          <ul>
+            <li>
+              <a href="https://wa.me/62895374651500?text=Halo,%20saya%20tertarik%20dengan%20layanan%20Ghaniyy%20Store" target="_blank">
+                <img src="assets/whatsapp-logo.svg" alt="WhatsApp" class="footer-icon"/> WhatsApp
+              </a>
+            </li>
+            <li>
+              <a href="https://www.instagram.com/ghaniyystore.official?igsh=dGpvbXdjb3ZzbmF2" target="_blank">
+                <img src="assets/instagram-logo.png" alt="Instagram" class="footer-icon"/> Instagram
+              </a>
+            </li>
+            <li>
+              <a href="mailto:cs.ghaniyystore@gmail.com">
+                <img src="assets/email-logo.svg" alt="Email" class="footer-icon"/> Email
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; <span id="year"></span> Ghaniyy Store. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    // Fungsi Toggle Menu
+    function toggleMenu() {
+      const menuOverlay = document.getElementById('menuOverlay');
+      if (menuOverlay) {
+        menuOverlay.classList.toggle('active');
+      }
+    }
+
+    // Fungsi Toggle Detail
+    function toggleDetail() {
+      const detail = document.getElementById('aboutDetail');
+      const btn = document.querySelector('.btn-more');
+      const btnText = document.getElementById('btnText');
+      
+      if (detail && btn && btnText) {
+        detail.classList.toggle('show');
+        btn.classList.toggle('active');
+        
+        if (detail.classList.contains('show')) {
+          btnText.textContent = 'Sembunyikan';
+        } else {
+          btnText.textContent = 'Lebih Lanjut';
+        }
+      }
+    }
+
+    // Set Year
+    document.addEventListener('DOMContentLoaded', function() {
+      const yearElement = document.getElementById('year');
+      if (yearElement) {
+        yearElement.textContent = new Date().getFullYear();
+      }
+      
+      // Scroll animation observer
+      const observerOptions = {
+        threshold: 0.1,
+        rootMargin: '0px 0px -100px 0px'
+      };
+      
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('animate');
+          }
+        });
+      }, observerOptions);
+      
+      // Observe all animated elements
+      document.querySelectorAll('.section-title, .about-intro, .why-card, .service-card').forEach(el => {
+        observer.observe(el);
+      });
+      
+      // Auto play music with resume functionality
+      const bgMusic = document.getElementById('bgMusic');
+      if (bgMusic) {
+        // Restore music position
+        const savedTime = localStorage.getItem('musicCurrentTime');
+        if (savedTime) {
+          bgMusic.currentTime = parseFloat(savedTime);
+        }
+        
+        // Save current time periodically
+        setInterval(() => {
+          if (!bgMusic.paused) {
+            localStorage.setItem('musicCurrentTime', bgMusic.currentTime);
+          }
+        }, 500);
+        
+        // Auto play on first interaction
+        if (!sessionStorage.getItem('musicStarted')) {
+          const playMusic = () => {
+            bgMusic.play().then(() => {
+              sessionStorage.setItem('musicStarted', 'true');
+            }).catch(() => {});
+            document.removeEventListener('click', playMusic);
+            document.removeEventListener('scroll', playMusic);
+            document.removeEventListener('touchstart', playMusic);
+          };
+          document.addEventListener('click', playMusic);
+          document.addEventListener('scroll', playMusic);
+          document.addEventListener('touchstart', playMusic);
+        } else {
+          bgMusic.play().catch(() => {});
+        }
+      }
+    });
+  </script>
+
+</body>
+</html>

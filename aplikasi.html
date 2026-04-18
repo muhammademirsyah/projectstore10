@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Aplikasi Digital Premium - Ghaniyy Store</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="src/css/styles.css" />
+  <script src="src/js/product-loader.js"></script>
+  <audio id="bgMusic" loop>
+    <source src="assets/music.mp3" type="audio/mpeg">
+  </audio>
+</head>
+<body>
+
+  <!-- HEADER -->
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="index.html">
+        <img src="assets/logo1.png" alt="Ghaniyy Store" class="logo-img"/>
+        <span class="brand-text">Ghaniyy Store</span>
+      </a>
+
+      <button class="mobile-menu-toggle" id="mobileMenuToggle" aria-label="Toggle menu">
+        <span>☰</span>
+      </button>
+
+      <nav class="main-nav" id="mainNav">
+        <a href="index.html">Home</a>
+        <a href="layanan.html">Layanan Akademik</a>
+        <a href="aplikasi.html" class="active">Aplikasi Digital</a>
+        <a href="kontak.html">Kontak</a>
+      </nav>
+
+      <div class="header-actions">
+        <a id="wa-contact" class="btn btn-primary" target="_blank" href="https://wa.me/62895374651500?text=Halo,%20saya%20tertarik%20dengan%20layanan%20Ghaniyy%20Store">WhatsApp</a>
+      </div>
+    </div>
+  </header>
+
+  <!-- PAGE HEADER -->
+  <section class="page-header">
+    <div class="container">
+      <a href="index.html" class="btn-back">← Kembali</a>
+      <h1>Aplikasi Digital Premium</h1>
+      <p>Akses berbagai aplikasi premium dengan harga terjangkau</p>
+    </div>
+  </section>
+
+  <!-- APPS GRID -->
+  <section class="section-apps-page">
+    <div class="container">
+      
+      <div class="apps-intro">
+        <h2>Pilih Aplikasi Premium Favorit Anda</h2>
+        <p>Nikmati berbagai aplikasi premium dengan harga jauh lebih murah dari harga resmi. Semua akun dijamin aman dan legal.</p>
+      </div>
+
+      <div class="apps-grid">
+        <!-- Apps will be rendered here by product-loader.js -->
+        <!-- Fallback defaults if JS doesn't run -->
+        <div class="app-card">
+          <div class="app-logo">
+            <img src="assets/canva-logo.png" alt="Canva Pro" />
+          </div>
+          <div class="app-info">
+            <h3>Canva Pro</h3>
+            <p class="app-desc">Platform desain grafis profesional dengan ribuan template premium</p>
+            <div class="app-price-status">
+              <div class="app-price">
+                <span class="price-label">Harga:</span>
+                <span class="price-value">Rp 49.000</span>
+              </div>
+              <div class="app-status ready">Ready</div>
+            </div>
+            <button class="btn-app-order" onclick="orderApp('Canva Pro', 49000)">Order Sekarang</button>
+          </div>
+        </div>
+
+        <div class="app-card">
+          <div class="app-logo">
+            <img src="assets/capcut.jpeg" alt="CapCut" />
+          </div>
+          <div class="app-info">
+            <h3>CapCut</h3>
+            <p class="app-desc">Aplikasi editing video profesional untuk membuat konten</p>
+            <div class="app-price-status">
+              <div class="app-price">
+                <span class="price-label">Harga:</span>
+                <span class="price-value">Rp 39.000</span>
+              </div>
+              <div class="app-status ready">Ready</div>
+            </div>
+            <button class="btn-app-order" onclick="orderApp('CapCut', 39000)">Order Sekarang</button>
+          </div>
+        </div>
+
+        <div class="app-card">
+          <div class="app-logo">
+            <img src="assets/netflix-logo.png" alt="Netflix Premium" />
+          </div>
+          <div class="app-info">
+            <h3>Netflix Premium</h3>
+            <p class="app-desc">Platform streaming film dan series terpopuler</p>
+            <div class="app-price-status">
+              <div class="app-price">
+                <span class="price-label">Harga:</span>
+                <span class="price-value">Rp 59.000</span>
+              </div>
+              <div class="app-status ready">Ready</div>
+            </div>
+            <button class="btn-app-order" onclick="orderApp('Netflix Premium', 59000)">Order Sekarang</button>
+          </div>
+        </div>
+
+        <div class="app-card">
+          <div class="app-logo">
+            <img src="assets/spotify-logo.png" alt="Spotify Premium" />
+          </div>
+          <div class="app-info">
+            <h3>Spotify Premium</h3>
+            <p class="app-desc">Platform streaming musik dengan jutaan lagu</p>
+            <div class="app-price-status">
+              <div class="app-price">
+                <span class="price-label">Harga:</span>
+                <span class="price-value">Rp 49.000</span>
+              </div>
+              <div class="app-status ready">Ready</div>
+            </div>
+            <button class="btn-app-order" onclick="orderApp('Spotify Premium', 49000)">Order Sekarang</button>
+          </div>
+        </div>
+
+        <div class="app-card">
+          <div class="app-logo">
+            <img src="assets/chatgpt-logo.png" alt="ChatGPT Plus" />
+          </div>
+          <div class="app-info">
+            <h3>ChatGPT Plus</h3>
+            <p class="app-desc">AI assistant canggih dari OpenAI</p>
+            <div class="app-price-status">
+              <div class="app-price">
+                <span class="price-label">Harga:</span>
+                <span class="price-value">Rp 129.000</span>
+              </div>
+              <div class="app-status ready">Ready</div>
+            </div>
+            <button class="btn-app-order" onclick="orderApp('ChatGPT Plus', 129000)">Order Sekarang</button>
+          </div>
+        </div>
+
+        <div class="app-card">
+          <div class="app-logo">
+            <img src="assets/viu-logo.png" alt="Viu Premium" />
+          </div>
+          <div class="app-info">
+            <h3>Viu Premium</h3>
+            <p class="app-desc">Platform streaming drama Asia terlengkap</p>
+            <div class="app-price-status">
+              <div class="app-price">
+                <span class="price-label">Harga:</span>
+                <span class="price-value">Rp 39.000</span>
+              </div>
+              <div class="app-status ready">Ready</div>
+            </div>
+            <button class="btn-app-order" onclick="orderApp('Viu Premium', 39000)">Order Sekarang</button>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="apps-custom">
+        <h3>Tidak menemukan aplikasi yang Anda cari?</h3>
+        <p>Hubungi kami untuk order aplikasi premium lainnya</p>
+        <button class="btn btn-primary btn-lg" onclick="orderCustomApp()">Request Aplikasi Lain</button>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- FLOATING CS BUTTON -->
+  <a href="https://wa.me/62895374651500?text=Halo,%20saya%20tertarik%20dengan%20layanan%20Ghaniyy%20Store" target="_blank" class="floating-cs">
+    <img src="assets/sapaghania.png" alt="Sapa Ghania" class="cs-image">
+  </a>
+
+  <!-- FOOTER -->
+  <footer class="site-footer">
+    <div class="container footer-content">
+      <div class="footer-grid">
+        <div class="footer-col">
+          <h4>Ghaniyy Store</h4>
+          <p>Layanan digital terpercaya untuk kebutuhan akademik dan hiburan Anda sejak 2022.</p>
+        </div>
+        <div class="footer-col">
+          <h4>Layanan</h4>
+          <ul>
+            <li><a href="layanan.html">Cek Turnitin</a></li>
+            <li><a href="layanan.html">Parafrase</a></li>
+            <li><a href="layanan.html">Perbaikan Naskah</a></li>
+            <li><a href="layanan.html">Publish Jurnal</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Menu</h4>
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="layanan.html">Layanan Akademik</a></li>
+            <li><a href="aplikasi.html">Aplikasi Digital</a></li>
+            <li><a href="kontak.html">Kontak</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Kontak</h4>
+          <ul>
+            <li>
+              <a href="https://wa.me/62895374651500?text=Halo,%20saya%20tertarik%20dengan%20layanan%20Ghaniyy%20Store" target="_blank">
+                <img src="assets/whatsapp-logo.svg" alt="WhatsApp" class="footer-icon"/> WhatsApp
+              </a>
+            </li>
+            <li>
+              <a href="https://www.instagram.com/ghaniyystore.official?igsh=dGpvbXdjb3ZzbmF2" target="_blank">
+                <img src="assets/instagram-logo.png" alt="Instagram" class="footer-icon"/> Instagram
+              </a>
+            </li>
+            <li>
+              <a href="mailto:cs.ghaniyystore@gmail.com">
+                <img src="assets/email-logo.svg" alt="Email" class="footer-icon"/> Email
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; <span id="year"></span> Ghaniyy Store. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    const mobileMenuToggle = document.getElementById('mobileMenuToggle');
+    const mainNav = document.getElementById('mainNav');
+    if (mobileMenuToggle && mainNav) {
+      mobileMenuToggle.addEventListener('click', () => {
+        mainNav.classList.toggle('mobile-open');
+      });
+    }
+
+    // Auto play music with resume functionality
+    const bgMusic = document.getElementById('bgMusic');
+    if (bgMusic) {
+      // Restore music position
+      const savedTime = localStorage.getItem('musicCurrentTime');
+      if (savedTime) {
+        bgMusic.currentTime = parseFloat(savedTime);
+      }
+      
+      // Save current time periodically
+      setInterval(() => {
+        if (!bgMusic.paused) {
+          localStorage.setItem('musicCurrentTime', bgMusic.currentTime);
+        }
+      }, 500);
+      
+      // Auto play on first interaction
+      if (!sessionStorage.getItem('musicStarted')) {
+        const playMusic = () => {
+          bgMusic.play().then(() => {
+            sessionStorage.setItem('musicStarted', 'true');
+          }).catch(() => {});
+          document.removeEventListener('click', playMusic);
+          document.removeEventListener('scroll', playMusic);
+          document.removeEventListener('touchstart', playMusic);
+        };
+        document.addEventListener('click', playMusic);
+        document.addEventListener('scroll', playMusic);
+        document.addEventListener('touchstart', playMusic);
+      } else {
+        bgMusic.play().catch(() => {});
+      }
+    }
+    
+    // Scroll animation observer
+    const observerOptions = {
+      threshold: 0.1,
+      rootMargin: '0px 0px -50px 0px'
+    };
+    
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('animate');
+        }
+      });
+    }, observerOptions);
+    
+    // Observe all app cards
+    document.querySelectorAll('.app-card').forEach(el => {
+      observer.observe(el);
+    });
+    
+    // Order functions
+    function orderApp(appName, price) {
+      const priceText = price ? ` - Rp ${price.toLocaleString('id-ID')}` : '';
+      const message = `Halo Ka, saya mau order ${appName}${priceText}`;
+      if (typeof window.openAdminWhatsApp === 'function') {
+        window.openAdminWhatsApp(message);
+      } else {
+        window.open(`https://wa.me/62895374651500?text=${encodeURIComponent(message)}`, '_blank');
+      }
+    }
+    
+    function orderCustomApp() {
+      const message = 'Halo Ka, saya mau order aplikasi premium lainnya (sebutkan aplikasi yang anda inginkan)';
+      if (typeof window.openAdminWhatsApp === 'function') {
+        window.openAdminWhatsApp(message);
+      } else {
+        window.open(`https://wa.me/62895374651500?text=${encodeURIComponent(message)}`, '_blank');
+      }
+    }
+    
+    // Set year
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+
+</body>
+</html>
